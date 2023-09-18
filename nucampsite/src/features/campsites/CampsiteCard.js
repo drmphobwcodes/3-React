@@ -1,31 +1,25 @@
-import reactstrap from 'reactstrap';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 //use const keyword and arrow function component named campsiteCard, with a parameter of props
 const CampsiteCard = ({campsite}) => {
-    const{image, name} = campsite;
+    const{id, image, name} = campsite;
     return (
         <div>
-            {/* use props.campsite to access the campsite object passed in as a prop */}
+            
+            <Link to={`${id}`}>
             <Card>
-                <CardImg width="100%" src={campsite.image} alt={props.campsite.name} />
-                {/* use props.campsite to access the campsite object passed in as a prop */}
+                <CardImg width="100%" src={image} alt={name} />
+                
                 <CardImgOverlay>
-                    <CardTitle>{campsite.name}</CardTitle>
+                    <CardTitle>{name}</CardTitle>
                 </CardImgOverlay>
             </Card>
+            </Link>
         </div>
     );
 }
 export default CampsiteCard;
 
-// Destructure the model property from the moto2 object, inside the parameter list for the listModel() function below.
 
-const listModel = ({ model }) => {
-    return (
-        <div>
-            <h1>{model}</h1>
-        </div>
-    );
-}
 
