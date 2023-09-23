@@ -1,5 +1,5 @@
 import { Card, CardImg, CardText, CardBody, Col } from "reactstrap";
-import CommentsList from "../features/comments/CommentsList";
+
 
 const CampsiteDetail = ({ campsite }) => {
   const { name, description, image } = campsite;
