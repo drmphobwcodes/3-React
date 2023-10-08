@@ -7,9 +7,7 @@ const initialState = {
 
 const campsitesSlice = createSlice({
     name: 'campsites',
-    initialState,
-    reducers: {},
-    extraReducers: {},
+    initialState
 });
 
 export const campsitesReducer = campsitesSlice.reducer;
