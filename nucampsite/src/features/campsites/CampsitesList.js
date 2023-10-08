@@ -4,8 +4,11 @@ import { selectAllCampsites } from './campsitesSlice';
 import { useSelector } from 'react-redux';
 
 
+
 const CampsitesList = ({ setCampsiteId }) => {
     const campsites = useSelector(selectAllCampsites);
+    console.log(campsites);
+    
     return (
         <Row className='ms-auto'>
             {campsites.map((campsite) => {

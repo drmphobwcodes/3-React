@@ -13,6 +13,7 @@ const items = useSelector((state) => [
     selectFeaturedPartner(state)
 ]);;
 
+
 console.log('display items:', items);
 
 return (
